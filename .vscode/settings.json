@@ -1,0 +1,14 @@
+{
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.postDeployTask": "npm install",
+    "azureFunctions.projectLanguage": "JavaScript",
+    "azureFunctions.projectRuntime": "~2",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "npm prune",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/844af58d-bdbc-4ec0-b68b-b07b2a439f79/resourceGroups/ipseity/providers/Microsoft.Web/sites/ipseity",
+    "appService.deploySubpath": "."
+}
