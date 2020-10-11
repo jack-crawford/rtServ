@@ -18,10 +18,9 @@ const handleRequest = function(request, response) {
   // Render the single client html file for any request the HTTP server receives
   console.log('request received: ' + request.url);
 
-  if(request.url === '/') {
     response.writeHead(200, {'Content-Type': 'text/html'});
-    response.end(fs.readFileSync('index.html'));
-  } 
+    response.end(fs.readFileSync('/index.html'));
+  
 };
 
 const httpsServer = https.createServer(serverConfig, handleRequest);
