@@ -19,7 +19,7 @@ const handleRequest = function(request, response) {
   console.log('request received: ' + request.url);
 
     response.writeHead(200, {'Content-Type': 'text/html'});
-    response.end(fs.readFileSync('/index.html'));
+    response.end(fs.readFileSync('index.html'));
   
 };
 
