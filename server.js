@@ -65,24 +65,5 @@ wsServer.on('request', request => {
 
 });
 
-// wss.on('connection', function(ws) {
-//   console.log("test")
-//   console.log(ws.clients)
-//   ws.on('message', function(message) {
-//     // Broadcast any received message to all clients
-//     console.log('received: %s', message);
-//     wss.broadcast(message);
-//     console.log(this.clients)
-//   });
-// });
-
-// wss.broadcast = function(data) {
-//   this.clients.forEach(function(client) {
-//     console.log(client.readyState)
-//       console.log(data)
-//       client.send(data);
-//   });
-// };
-
 console.log('Server running. Visit https://localhost:' +  (PORT) + ' in Firefox/Chrome.\n\n');
 
