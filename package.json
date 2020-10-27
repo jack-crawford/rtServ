@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "websocket": "^1.0.32",
+    "websocket-over-nodejs": "0.0.8",
     "ws": "^7.3.1"
   }
 }
