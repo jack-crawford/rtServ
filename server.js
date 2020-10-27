@@ -1,6 +1,6 @@
 const { Server } = require('ws');
 const express = require('express')
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const INDEX = '/index.html';
 
 const server = express()
@@ -27,4 +27,4 @@ wss.broadcast = function(data) {
   });
 };
 
-console.log('Server running. Visit https://localhost:' +  (3000) + ' in Firefox/Chrome.\n\n');
+console.log('Server running. Visit https://localhost:' +  (PORT) + ' in Firefox/Chrome.\n\n');
