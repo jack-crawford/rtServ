@@ -1,6 +1,5 @@
 const { Server } = require('ws');
 const express = require('express')
-
 const PORT = 3000;
 const INDEX = '/index.html';
 
@@ -11,6 +10,7 @@ const server = express()
 const wss = new Server({ server });
 
 wss.on('connection', function(ws) {
+  console.log("test")
   ws.on('message', function(message) {
     // Broadcast any received message to all clients
     console.log('received: %s', message);
@@ -20,7 +20,8 @@ wss.on('connection', function(ws) {
 
 wss.broadcast = function(data) {
   this.clients.forEach(function(client) {
-    if(client.readyState === WebSocket.OPEN) {
+    console.log(client.readyState)
+    if(client.readyState == 1) {
       client.send(data);
     }
   });
