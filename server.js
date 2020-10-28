@@ -4,7 +4,7 @@ const express = require('express');
 const http = require('http');
 const { client } = require('websocket');
 const server = require('websocket').server;
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const INDEX = '/index.html';
 
 // const server = express()
