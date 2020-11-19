@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "g": "^2.0.1",
+    "ngrok": "^3.3.0",
+    "nodemon": "^2.0.6",
     "websocket": "^1.0.32",
     "websocket-over-nodejs": "0.0.8",
     "ws": "^7.3.1"

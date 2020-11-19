@@ -45,20 +45,23 @@ wsServer.on('request', request => {
       if(el.connection == connection){
         el.id = js.uuid;
       } else {
-        if (js.sdp){
-          el.connection.send(JSON.stringify({
-            sdp: js.sdp,
-            text: 'have an sdp!',
-            uuid: js.uuid,
-          }))
+        if(js.uuid == "jack"){
+          if (js.sdp){
+            el.connection.send(JSON.stringify({
+              sdp: js.sdp,
+              text: 'have an sdp!',
+              uuid: js.uuid,
+            }))
+          }
+          if(js.ice){
+            el.connection.send(JSON.stringify({
+              ice: js.ice,
+              text: 'have an ice!',
+              uuid: js.uuid,
+            }))
+          }
         }
-        if(js.ice){
-          el.connection.send(JSON.stringify({
-            ice: js.ice,
-            text: 'have an ice!',
-            uuid: js.uuid,
-          }))
-        }
+
       }
     })
   });
